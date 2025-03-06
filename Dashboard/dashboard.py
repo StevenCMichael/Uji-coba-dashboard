@@ -7,7 +7,7 @@ from babel.numbers import format_currency
 sns.set(style='dark')
 
 # Menyiapkan data all_data
-all_df = pd.read_csv('all_data.csv')
+all_df = pd.read_csv('Dashboard/all_data.csv')
 
 # Menyiapkan jumlah order harian
 def create_daily_orders_df(df):
@@ -46,7 +46,7 @@ def create_bycity_df(df):
     return bycity_df
 
 
-rfm_df = pd.read_csv('rfm_df.csv')
+rfm_df = pd.read_csv('Dashboard/rfm_df.csv')
 
 # Menyiapkan filter
 min_date = pd.to_datetime(all_df['order_approved_at']).dt.date.min()
@@ -73,7 +73,6 @@ daily_orders_df = create_daily_orders_df(main_df)
 sum_order_items_df = create_sum_order_items_df(main_df)
 rating_df,max_count_rating = create_byrating(main_df)
 bycity_df = create_bycity_df(main_df)
-rfm_df = create_rfm_df(main_df)
 
 # Menyiapkan dashboard
 st.header('E-commerce Dashboard :sparkles:')
@@ -173,16 +172,16 @@ st.subheader("Best Customer Based on RFM Parameters")
 col1, col2, col3 = st.columns(3)
  
 with col1:
-    avg_recency = round(rfm_df.recency.mean(), 1)
+    avg_recency = round(rfm_df.Recency.mean(), 1)
     st.metric("Average Recency (days)", value=avg_recency)
  
 with col2:
-    avg_frequency = round(rfm_df.frequency.mean(), 2)
+    avg_frequency = round(rfm_df.Frequency.mean(), 2)
     st.metric("Average Frequency", value=avg_frequency)
  
 with col3:
-    avg_frequency = format_currency(rfm_df.monetary.mean(), "AUD", locale='es_CO') 
-    st.metric("Average Monetary", value=avg_frequency)
+    avg_monetary = format_currency(rfm_df.Monetary.mean(), "AUD", locale='es_CO') 
+    st.metric("Average Monetary", value=avg_monetary)
  
 fig, ax = plt.subplots(nrows=1, ncols=3, figsize=(28, 14))
 colors = ["#90CAF9", "#90CAF9", "#90CAF9", "#90CAF9", "#90CAF9"]
