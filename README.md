@@ -34,7 +34,7 @@
 4. Buka Visual Studio Code (VSCode) Anda dan jalankan file dengan mengaktifkan terminal kemudian ketik  `streamlit run dashboard.py`.
 
 ## Screenshots
-![Screenshot (571)](https://github.com/user-attachments/assets/3a4ac79e-53a9-4c9b-96ef-56c4570b99bc)
-![Screenshot (572)](https://github.com/user-attachments/assets/dcda5f66-3414-446a-8448-b30ee73b8c9e)
-![Screenshot (573)](https://github.com/user-attachments/assets/0ab46e88-83b2-48d4-bdcd-5ee779f548d7)
-![Screenshot (574)](https://github.com/user-attachments/assets/cf221ed3-4c34-4861-b2ea-45245656066d)
+![Image](https://github.com/user-attachments/assets/88571c07-7e21-4dd9-9453-4ffe3fbd0ba7)
+![Image](https://github.com/user-attachments/assets/a68548b1-42df-4fac-8196-2020632c88ed)
+![Image](https://github.com/user-attachments/assets/9f4b7f58-e27e-46ba-b0af-2acba41f63b6)
+![Image](https://github.com/user-attachments/assets/0abfd3cd-3e23-458f-a486-5c9c09e5fedb)
